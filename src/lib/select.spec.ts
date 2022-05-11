@@ -2,7 +2,7 @@ import test from 'ava';
 
 import { select } from './select';
 
-test('Testing Select-General', (t) => {
+test('Testing Select-One Join', (t) => {
   const real = select({
     customers: {
       _id: '_id',
@@ -53,6 +53,83 @@ test('Testing Select-General', (t) => {
       B: '2',
       C: '3',
       G: null,
+      _id: 'y',
+    },
+  ];
+
+  t.deepEqual(real, expected);
+});
+
+test('Testing Select-Two Joins', (t) => {
+  const real = select({
+    customers: {
+      _id: '_id',
+      a: 'A',
+      b: 'B',
+      c: 'C',
+    },
+    customers_experts: {
+      _id: '_id',
+      a: 'A',
+      g: 'G',
+    },
+    customers_addresses: {
+      _id: '_id',
+      t: 'T',
+      u: 'U',
+    },
+  })
+    .from('customers', [
+      {
+        _id: 'x',
+        a: '1',
+        b: '2',
+        c: '3',
+      },
+      {
+        _id: 'y',
+        a: '1',
+        b: '2',
+        c: '3',
+      },
+    ])
+    .leftJoin('customers_experts', [
+      {
+        _id: 'x',
+        a: '3',
+        g: '2',
+      },
+    ])
+    .on(['_id'])
+    .leftJoin('customers_addresses', [
+      {
+        _id: 'x',
+        t: '$',
+        u: '^',
+      },
+    ])
+    .on(['_id'])
+    .end();
+
+  t.log(real);
+
+  const expected = [
+    {
+      A: '3',
+      B: '2',
+      C: '3',
+      G: '2',
+      T: '$',
+      U: '^',
+      _id: 'x',
+    },
+    {
+      A: '1',
+      B: '2',
+      C: '3',
+      G: null,
+      T: null,
+      U: null,
       _id: 'y',
     },
   ];
