@@ -30,7 +30,7 @@ test('Left Join Object: Right Object Missing', (t) => {
         b: 2,
         c: 3,
       },
-      undefined,
+      null,
       ['d', 2]
     );
     const expectedValue = {

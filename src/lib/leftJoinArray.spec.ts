@@ -3,7 +3,7 @@ import test from 'ava';
 import { leftJoinArray } from './leftJoinArray';
 
 test('Left Join Array', (t) => {
-  const real = leftJoinArray(
+  const realValue = leftJoinArray(
     [
       {
         a: '1',
@@ -30,6 +30,21 @@ test('Left Join Array', (t) => {
     ],['a']
   );
 
-  t.log(real)
-
+  const expectedValue = [
+    {
+      a: '1',
+      b: '2',
+      c: '3',
+      g: '5',
+      h: '6',
+    },
+    {
+      a: '2',
+      b: '3',
+      c: '4',
+      g: null,
+      h: null,
+    },
+  ]
+  t.deepEqual(realValue,expectedValue)
 });

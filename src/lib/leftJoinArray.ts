@@ -34,6 +34,6 @@ export const leftJoinArray = <A extends RecordKeys, B, C extends RecordKeys, D>(
       );
     });
     return [...runningArray, ...joinedObjects];
-  }, [] as readonly ((Record<A, B> & Record<C, null>) | (Record<A, B> & Record<C, D>))[]);
+  }, [] as readonly (Record<A | C, B | null> | Record<A | C, B | D>)[]);
   return mergedArray;
 };
