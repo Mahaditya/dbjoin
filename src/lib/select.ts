@@ -23,24 +23,26 @@ const on =
 
     return {
       leftJoin: leftJoin(masterTemplate)(joinedArray),
-      end: ()=>joinedArray,
+      end: () => joinedArray,
     };
   };
 
 const leftJoin =
   <
     TableName extends string,
-    TableKeys extends RecordKeys,
-    TemplateKeys extends TableKeys,
+    LeftTableKeys extends RecordKeys,
+    RightTableKeys extends RecordKeys,
+    TemplateKeys extends RightTableKeys,
     TemplateValues extends RecordKeys,
-    TableValues
+    LeftTableValues,
+    RightTableValues
   >(
     masterTemplate: Record<TableName, Record<TemplateKeys, TemplateValues>>
   ) =>
-  (leftTable: RecordArray<TableKeys, TableValues>) =>
+  (leftTable: RecordArray<LeftTableKeys, LeftTableValues>) =>
   (
     rightTableName: TableName,
-    rightTable: RecordArray<TableKeys, TableValues>
+    rightTable: RecordArray<RightTableKeys, RightTableValues>
   ) => {
     const filteredObjectArray = filterObjectArray(
       masterTemplate[rightTableName],
