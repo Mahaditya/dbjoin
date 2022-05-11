@@ -1,4 +1,4 @@
-type RecordKeys = string | number | symbol;
+import type { RecordKeys } from '../domain';
 
 export function leftJoinObject<
   LeftKeys extends RecordKeys,

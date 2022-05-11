@@ -1,7 +1,6 @@
-import { leftJoinObject } from './leftJoinObject';
+import type { RecordArray, RecordKeys } from '../domain';
 
-type RecordKeys = string | number | symbol;
-type RecordArray<A extends RecordKeys, B> = readonly Record<A, B>[];
+import { leftJoinObject } from './leftJoinObject';
 
 export const leftJoinArray = <A extends RecordKeys, B, C extends RecordKeys, D>(
   leftArray: RecordArray<A, B>,

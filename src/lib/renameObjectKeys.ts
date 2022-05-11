@@ -1,7 +1,8 @@
 /* eslint-disable functional/no-loop-statement */
 /* eslint-disable functional/no-let */
+import type { RecordKeys } from '../domain';
 
-export const renameObjectKeys = <A extends string, B, C extends string>(
+export const renameObjectKeys = <A extends RecordKeys, B, C extends RecordKeys>(
   template: Record<A, C>,
   obj: Record<A, B>
 ) => {
