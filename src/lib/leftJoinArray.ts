@@ -7,8 +7,8 @@ export const leftJoinArray = <A extends RecordKeys, B, C extends RecordKeys, D>(
   rightArray: RecordArray<C, D>,
   joinKeys: readonly (C & A)[]
 ) => {
-  if(rightArray.length===0){
-    return leftArray
+  if (rightArray.length === 0) {
+    return leftArray;
   }
   const mergedArray = leftArray.reduce((runningArray, currObject) => {
     const rightObjects = rightArray.filter((rightObject) => {
