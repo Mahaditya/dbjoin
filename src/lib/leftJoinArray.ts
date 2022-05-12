@@ -20,11 +20,11 @@ export const leftJoinArray = <A extends RecordKeys, B, C extends RecordKeys, D>(
       }, initialValue);
     });
 
-    if (rightObjects?.length === 0) {
+    if (rightObjects.length === 0) {
       const joinedObject = leftJoinObject(
         currObject,
         null,
-        Object.keys(rightArray?.[0]) as unknown as readonly C[]
+        Object.keys(rightArray[0]) as unknown as readonly C[]
       );
       return [...runningArray, joinedObject];
     }
