@@ -22,23 +22,22 @@ test('Left Join Object: Both Objects Present', (t) => {
   t.deepEqual(realValue, expectedValue);
 });
 
-
 test('Left Join Object: Right Object Missing', (t) => {
-    const realValue = leftJoinObject(
-      {
-        a: 1,
-        b: 2,
-        c: 3,
-      },
-      null,
-      ['d', 2]
-    );
-    const expectedValue = {
+  const realValue = leftJoinObject(
+    {
       a: 1,
       b: 2,
       c: 3,
-      d: null,
-      2: null,
-    };
-    t.deepEqual(realValue, expectedValue);
-  });
+    },
+    null,
+    ['d', 2]
+  );
+  const expectedValue = {
+    a: 1,
+    b: 2,
+    c: 3,
+    d: null,
+    2: null,
+  };
+  t.deepEqual(realValue, expectedValue);
+});

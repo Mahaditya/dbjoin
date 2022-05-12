@@ -27,7 +27,8 @@ test('Left Join Array', (t) => {
         g: '7',
         h: '8',
       },
-    ],['a']
+    ],
+    ['a']
   );
 
   const expectedValue = [
@@ -45,11 +46,9 @@ test('Left Join Array', (t) => {
       g: null,
       h: null,
     },
-  ]
-  t.deepEqual(realValue,expectedValue)
+  ];
+  t.deepEqual(realValue, expectedValue);
 });
-
-
 
 test('Left Join Array - Multi Join', (t) => {
   const realValue = leftJoinArray(
@@ -81,7 +80,8 @@ test('Left Join Array - Multi Join', (t) => {
         g: '9',
         h: '10',
       },
-    ],['a']
+    ],
+    ['a']
   );
 
   const expectedValue = [
@@ -106,6 +106,6 @@ test('Left Join Array - Multi Join', (t) => {
       g: '9',
       h: '10',
     },
-  ]
-  t.deepEqual(realValue,expectedValue)
+  ];
+  t.deepEqual(realValue, expectedValue);
 });

@@ -14,12 +14,12 @@ test('Testing Filter Object', (t) => {
 
 test('Testing Filter and Rename Object', (t) => {
   const filterAndRename = renameObjectKeys(
-    { a: 'A', d: 'D', b: 'B'},
+    { a: 'A', d: 'D', b: 'B' },
     filterObject(
       { a: 'A', d: 'D', b: 'B' },
       { b: 'there', a: 3, d: '4', t: 'dog' }
     )
   );
-  const expectedValue = { "A": 3, "B": 'there', "D": '4' };
+  const expectedValue = { A: 3, B: 'there', D: '4' };
   t.deepEqual(filterAndRename, expectedValue);
 });

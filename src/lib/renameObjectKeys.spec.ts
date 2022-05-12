@@ -19,6 +19,6 @@ test('Rename Object Ideal Case', (t) => {
   t.deepEqual(realValue, expectedValue);
 });
 
-test('Rename Object With empty Objects',(t)=>{
-    t.deepEqual(renameObjectKeys({},{}),{})
-})
+test('Rename Object With empty Objects', (t) => {
+  t.deepEqual(renameObjectKeys({}, {}), {});
+});
