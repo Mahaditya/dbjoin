@@ -109,3 +109,36 @@ test('Left Join Array - Multi Join', (t) => {
   ];
   t.deepEqual(realValue, expectedValue);
 });
+
+test('Left Join Array - Right Array Empty', (t) => {
+  const realValue = leftJoinArray(
+    [
+      {
+        a: '1',
+        b: '2',
+        c: '3',
+      },
+      {
+        a: '2',
+        b: '3',
+        c: '4',
+      },
+    ],
+    [],
+    ['a']
+  );
+
+  const expectedValue = [
+    {
+      a: '1',
+      b: '2',
+      c: '3',
+    },
+    {
+      a: '2',
+      b: '3',
+      c: '4',
+    },
+  ];
+  t.deepEqual(realValue, expectedValue);
+});

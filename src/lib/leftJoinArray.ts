@@ -7,6 +7,9 @@ export const leftJoinArray = <A extends RecordKeys, B, C extends RecordKeys, D>(
   rightArray: RecordArray<C, D>,
   joinKeys: readonly (C & A)[]
 ) => {
+  if(rightArray.length===0){
+    return leftArray
+  }
   const mergedArray = leftArray.reduce((runningArray, currObject) => {
     const rightObjects = rightArray.filter((rightObject) => {
       const initialValue = true as boolean;
