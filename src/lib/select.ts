@@ -1,4 +1,4 @@
-import { RecordArray, RecordKeys } from '../domain';
+import { Keys, RecordKeys, Rows } from '../domain';
 
 import { filterObjectArray } from './filterObjectArray';
 import { leftJoinArray } from './leftJoinArray';
@@ -7,18 +7,16 @@ import { renameArrayObjects } from './renameArrayObjects';
 const on =
   <
     TableName extends string,
-    LeftTableKeys extends RecordKeys,
-    RightTableKeys extends RecordKeys,
-    TemplateKeys extends LeftTableKeys | RightTableKeys,
+    TemplateKeys extends Keys<LeftObject> | Keys<RightObject>,
     TemplateValues extends RecordKeys,
-    LeftTableValues,
-    RightTableValues
+    LeftObject,
+    RightObject,
   >(
     masterTemplate: Record<TableName, Record<TemplateKeys, TemplateValues>>
   ) =>
-  (leftTable: RecordArray<LeftTableKeys, LeftTableValues>) =>
-  (rightTable: RecordArray<RightTableKeys, RightTableValues>) =>
-  (joinKeys: readonly (LeftTableKeys & RightTableKeys)[]) => {
+  (leftTable: Rows<LeftObject>) =>
+  (rightTable: Rows<RightObject>) =>
+  (joinKeys: readonly (Keys<RightObject> & Keys<LeftObject>)[]) => {
     const joinedArray = leftJoinArray(leftTable, rightTable, joinKeys);
 
     return {
@@ -30,19 +28,17 @@ const on =
 const leftJoin =
   <
     TableName extends string,
-    LeftTableKeys extends RecordKeys,
-    RightTableKeys extends RecordKeys,
-    TemplateKeys extends RightTableKeys,
+    TemplateKeys extends Keys<RightObject>,
     TemplateValues extends RecordKeys,
-    LeftTableValues,
-    RightTableValues
+    LeftObject,
+    RightObject,
   >(
     masterTemplate: Record<TableName, Record<TemplateKeys, TemplateValues>>
   ) =>
-  (leftTable: RecordArray<LeftTableKeys, LeftTableValues>) =>
+  (leftTable: Rows<LeftObject>) =>
   (
     rightTableName: TableName,
-    rightTable: RecordArray<RightTableKeys, RightTableValues>
+    rightTable: Rows<RightObject>
   ) => {
     const filteredObjectArray = filterObjectArray(
       masterTemplate[rightTableName],
@@ -61,14 +57,13 @@ const leftJoin =
 const from =
   <
     TableName extends string,
-    TableKeys extends RecordKeys,
-    TemplateKeys extends TableKeys,
+    TemplateKeys extends Keys<LeftObject>,
     TemplateValues extends RecordKeys,
-    TableValues
+    LeftObject,
   >(
     template: Record<TableName, Record<TemplateKeys, TemplateValues>>
   ) =>
-  (tableName: TableName, table: RecordArray<TableKeys, TableValues>) => {
+  (tableName: TableName, table: Rows<LeftObject>) => {
     const filteredObjectArray = filterObjectArray(template[tableName], table);
     const renamedObjectArray = renameArrayObjects(
       template[tableName],
