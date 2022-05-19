@@ -1,4 +1,4 @@
-import { Keys, RecordKeys, Rows } from '../domain';
+import { Keys, RecordArray, RecordKeys, Rows } from '../domain';
 
 import { filterObjectArray } from './filterObjectArray';
 import { leftJoinArray } from './leftJoinArray';
@@ -7,16 +7,18 @@ import { renameArrayObjects } from './renameArrayObjects';
 const on =
   <
     TableName extends string,
-    TemplateKeys extends Keys<LeftObject> | Keys<RightObject>,
+    LeftTableKeys extends RecordKeys,
+    RightTableKeys extends RecordKeys,
+    TemplateKeys extends LeftTableKeys | RightTableKeys,
     TemplateValues extends RecordKeys,
-    LeftObject,
-    RightObject,
+    LeftTableValues,
+    RightTableValues
   >(
     masterTemplate: Record<TableName, Record<TemplateKeys, TemplateValues>>
   ) =>
-  (leftTable: Rows<LeftObject>) =>
-  (rightTable: Rows<RightObject>) =>
-  (joinKeys: readonly (Keys<RightObject> & Keys<LeftObject>)[]) => {
+  (leftTable: RecordArray<LeftTableKeys, LeftTableValues>) =>
+  (rightTable: RecordArray<RightTableKeys, RightTableValues>) =>
+  (joinKeys: readonly (LeftTableKeys & RightTableKeys)[]) => {
     const joinedArray = leftJoinArray(leftTable, rightTable, joinKeys);
 
     return {
