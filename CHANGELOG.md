@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.0.4](https://github.com/Mahaditya/dbjoin/compare/v1.0.3...v1.0.4) (2022-05-19)
+
+
+### Bug Fixes
+
+* filterObject type defs now support Interfaces ([375956a](https://github.com/Mahaditya/dbjoin/commit/375956a360dbf8001c2db19dce47a10d030b7d42))
+* Format fix Prettier ([92aa084](https://github.com/Mahaditya/dbjoin/commit/92aa08437c5bbd8858760ab6f47f1561deafebbf))
+
 ### [1.0.3](https://github.com/Mahaditya/dbjoin/compare/v1.0.2...v1.0.3) (2022-05-12)
 
 ### [1.0.1](https://github.com/Mahaditya/dbjoin/compare/v1.0.2...v1.0.1) (2022-05-12)
