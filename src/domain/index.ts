@@ -18,5 +18,5 @@ export type Row<T> = T extends
   : Record<Keys<T>, Values<T>>;
 
 export type Common<A, B> = {
-readonly [P in keyof A & keyof B]: A[P] | B[P];
+  readonly [P in keyof A & keyof B]: A[P] | B[P];
 };

@@ -1,8 +1,4 @@
-import type {
-  Columns,
-  RecordKeys,
-  Rows,
-} from '../domain';
+import type { Columns, RecordKeys, Rows } from '../domain';
 
 import { filterObject } from './filterObject';
 

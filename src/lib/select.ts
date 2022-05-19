@@ -33,15 +33,12 @@ const leftJoin =
     TemplateKeys extends Keys<RightObject>,
     TemplateValues extends RecordKeys,
     LeftObject,
-    RightObject,
+    RightObject
   >(
     masterTemplate: Record<TableName, Record<TemplateKeys, TemplateValues>>
   ) =>
   (leftTable: Rows<LeftObject>) =>
-  (
-    rightTableName: TableName,
-    rightTable: Rows<RightObject>
-  ) => {
+  (rightTableName: TableName, rightTable: Rows<RightObject>) => {
     const filteredObjectArray = filterObjectArray(
       masterTemplate[rightTableName],
       rightTable
@@ -61,7 +58,7 @@ const from =
     TableName extends string,
     TemplateKeys extends Keys<LeftObject>,
     TemplateValues extends RecordKeys,
-    LeftObject,
+    LeftObject
   >(
     template: Record<TableName, Record<TemplateKeys, TemplateValues>>
   ) =>

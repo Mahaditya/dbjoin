@@ -1,11 +1,6 @@
 /* eslint-disable functional/no-let */
 /* eslint-disable functional/no-loop-statement */
-import type {
-  Columns,
-  RecordKeys,
-  Row,
-  Values,
-} from '../domain';
+import type { Columns, RecordKeys, Row, Values } from '../domain';
 
 export const filterObject = <
   TemplateKeys extends Columns<Obj>,
