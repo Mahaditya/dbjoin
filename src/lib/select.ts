@@ -9,7 +9,7 @@ const on =
     TableName extends string,
     LeftTableKeys extends RecordKeys,
     RightTableKeys extends RecordKeys,
-    TemplateKeys extends LeftTableKeys | RightTableKeys,
+    TemplateKeys extends LeftTableKeys | RightTableKeys | string,
     TemplateValues extends RecordKeys,
     LeftTableValues,
     RightTableValues
