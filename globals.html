@@ -70,8 +70,14 @@
 						<section class="tsd-index-section ">
 							<h3>Type aliases</h3>
 							<ul class="tsd-index-list">
+								<li class="tsd-kind-type-alias tsd-has-type-parameter"><a href="globals.html#columns" class="tsd-kind-icon">Columns</a></li>
+								<li class="tsd-kind-type-alias tsd-has-type-parameter"><a href="globals.html#common" class="tsd-kind-icon">Common</a></li>
+								<li class="tsd-kind-type-alias tsd-has-type-parameter"><a href="globals.html#keys" class="tsd-kind-icon">Keys</a></li>
 								<li class="tsd-kind-type-alias tsd-has-type-parameter"><a href="globals.html#recordarray" class="tsd-kind-icon">Record<wbr>Array</a></li>
 								<li class="tsd-kind-type-alias"><a href="globals.html#recordkeys" class="tsd-kind-icon">Record<wbr>Keys</a></li>
+								<li class="tsd-kind-type-alias tsd-has-type-parameter"><a href="globals.html#row" class="tsd-kind-icon">Row</a></li>
+								<li class="tsd-kind-type-alias tsd-has-type-parameter"><a href="globals.html#rows" class="tsd-kind-icon">Rows</a></li>
+								<li class="tsd-kind-type-alias tsd-has-type-parameter"><a href="globals.html#values" class="tsd-kind-icon">Values</a></li>
 							</ul>
 						</section>
 						<section class="tsd-index-section ">
@@ -95,12 +101,68 @@
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Type aliases</h2>
 				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-has-type-parameter">
+					<a name="columns" class="tsd-anchor"></a>
+					<h3>Columns</h3>
+					<div class="tsd-signature tsd-kind-icon">Columns&lt;T&gt;<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">keyof </span><a href="globals.html#row" class="tsd-signature-type">Row</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/Mahaditya/dbjoin/blob/92aa084/src/domain/index.ts#L5">domain/index.ts:5</a></li>
+						</ul>
+					</aside>
+					<h4 class="tsd-type-parameters-title">Type parameters</h4>
+					<ul class="tsd-type-parameters">
+						<li>
+							<h4>T</h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-has-type-parameter">
+					<a name="common" class="tsd-anchor"></a>
+					<h3>Common</h3>
+					<div class="tsd-signature tsd-kind-icon">Common&lt;A, B&gt;<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">{}</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/Mahaditya/dbjoin/blob/92aa084/src/domain/index.ts#L20">domain/index.ts:20</a></li>
+						</ul>
+					</aside>
+					<h4 class="tsd-type-parameters-title">Type parameters</h4>
+					<ul class="tsd-type-parameters">
+						<li>
+							<h4>A</h4>
+						</li>
+						<li>
+							<h4>B</h4>
+						</li>
+					</ul>
+					<div class="tsd-type-declaration">
+						<h4>Type declaration</h4>
+						<ul class="tsd-parameters">
+						</ul>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-has-type-parameter">
+					<a name="keys" class="tsd-anchor"></a>
+					<h3>Keys</h3>
+					<div class="tsd-signature tsd-kind-icon">Keys&lt;A&gt;<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">keyof </span><span class="tsd-signature-type">A</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/Mahaditya/dbjoin/blob/92aa084/src/domain/index.ts#L6">domain/index.ts:6</a></li>
+						</ul>
+					</aside>
+					<h4 class="tsd-type-parameters-title">Type parameters</h4>
+					<ul class="tsd-type-parameters">
+						<li>
+							<h4>A</h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-has-type-parameter">
 					<a name="recordarray" class="tsd-anchor"></a>
 					<h3>Record<wbr>Array</h3>
 					<div class="tsd-signature tsd-kind-icon">Record<wbr>Array&lt;A, B&gt;<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">readonly </span><span class="tsd-signature-type">Record</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">A</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">B</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">[]</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/Mahaditya/dbjoin/blob/5c244d3/src/domain/index.ts#L2">domain/index.ts:2</a></li>
+							<li>Defined in <a href="https://github.com/Mahaditya/dbjoin/blob/92aa084/src/domain/index.ts#L2">domain/index.ts:2</a></li>
 						</ul>
 					</aside>
 					<h4 class="tsd-type-parameters-title">Type parameters</h4>
@@ -119,9 +181,57 @@
 					<div class="tsd-signature tsd-kind-icon">Record<wbr>Keys<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">symbol</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/Mahaditya/dbjoin/blob/5c244d3/src/domain/index.ts#L1">domain/index.ts:1</a></li>
+							<li>Defined in <a href="https://github.com/Mahaditya/dbjoin/blob/92aa084/src/domain/index.ts#L1">domain/index.ts:1</a></li>
 						</ul>
 					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-has-type-parameter">
+					<a name="row" class="tsd-anchor"></a>
+					<h3>Row</h3>
+					<div class="tsd-signature tsd-kind-icon">Row&lt;T&gt;<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">T</span><span class="tsd-signature-symbol"> extends </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">null</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-symbol">readonly </span><span class="tsd-signature-type">unknown</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-symbol">readonly </span><span class="tsd-signature-symbol">[</span><span class="tsd-signature-symbol">]</span><span class="tsd-signature-symbol"> ? </span><span class="tsd-signature-type">never</span><span class="tsd-signature-symbol"> : </span><span class="tsd-signature-type">Record</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Keys</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">Values</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/Mahaditya/dbjoin/blob/92aa084/src/domain/index.ts#L9">domain/index.ts:9</a></li>
+						</ul>
+					</aside>
+					<h4 class="tsd-type-parameters-title">Type parameters</h4>
+					<ul class="tsd-type-parameters">
+						<li>
+							<h4>T</h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-has-type-parameter">
+					<a name="rows" class="tsd-anchor"></a>
+					<h3>Rows</h3>
+					<div class="tsd-signature tsd-kind-icon">Rows&lt;T&gt;<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">readonly </span><a href="globals.html#row" class="tsd-signature-type">Row</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">[]</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/Mahaditya/dbjoin/blob/92aa084/src/domain/index.ts#L4">domain/index.ts:4</a></li>
+						</ul>
+					</aside>
+					<h4 class="tsd-type-parameters-title">Type parameters</h4>
+					<ul class="tsd-type-parameters">
+						<li>
+							<h4>T</h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-has-type-parameter">
+					<a name="values" class="tsd-anchor"></a>
+					<h3>Values</h3>
+					<div class="tsd-signature tsd-kind-icon">Values&lt;A&gt;<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">A</span><span class="tsd-signature-symbol">[</span><span class="tsd-signature-type">Keys</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">A</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">]</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/Mahaditya/dbjoin/blob/92aa084/src/domain/index.ts#L7">domain/index.ts:7</a></li>
+						</ul>
+					</aside>
+					<h4 class="tsd-type-parameters-title">Type parameters</h4>
+					<ul class="tsd-type-parameters">
+						<li>
+							<h4>A</h4>
+						</li>
+					</ul>
 				</section>
 			</section>
 			<section class="tsd-panel-group tsd-member-group ">
@@ -130,40 +240,37 @@
 					<a name="filterobject" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagConst">Const</span> filter<wbr>Object</h3>
 					<ul class="tsd-signatures tsd-kind-function tsd-has-type-parameter">
-						<li class="tsd-signature tsd-kind-icon">filter<wbr>Object&lt;A, B, C, D&gt;<span class="tsd-signature-symbol">(</span>template<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Record</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">C</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">B</span><span class="tsd-signature-symbol">&gt;</span>, obj<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Record</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">A</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">D</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Record</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">C</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">D</span><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">filter<wbr>Object&lt;TemplateKeys, TemplateValues, Obj&gt;<span class="tsd-signature-symbol">(</span>template<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Record</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">TemplateKeys</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">TemplateValues</span><span class="tsd-signature-symbol">&gt;</span>, obj<span class="tsd-signature-symbol">: </span><a href="globals.html#row" class="tsd-signature-type">Row</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Obj</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Record</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">TemplateKeys</span><span class="tsd-signature-symbol">, </span><a href="globals.html#values" class="tsd-signature-type">Values</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Obj</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/Mahaditya/dbjoin/blob/5c244d3/src/lib/filterObject.ts#L5">lib/filterObject.ts:5</a></li>
+									<li>Defined in <a href="https://github.com/Mahaditya/dbjoin/blob/92aa084/src/lib/filterObject.ts#L5">lib/filterObject.ts:5</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-type-parameters-title">Type parameters</h4>
 							<ul class="tsd-type-parameters">
 								<li>
-									<h4>A<span class="tsd-signature-symbol">: </span><a href="globals.html#recordkeys" class="tsd-signature-type">RecordKeys</a></h4>
+									<h4>TemplateKeys<span class="tsd-signature-symbol">: </span><a href="globals.html#columns" class="tsd-signature-type">Columns</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Obj</span><span class="tsd-signature-symbol">&gt;</span></h4>
 								</li>
 								<li>
-									<h4>B</h4>
+									<h4>TemplateValues<span class="tsd-signature-symbol">: </span><a href="globals.html#recordkeys" class="tsd-signature-type">RecordKeys</a></h4>
 								</li>
 								<li>
-									<h4>C<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">A</span></h4>
-								</li>
-								<li>
-									<h4>D</h4>
+									<h4>Obj</h4>
 								</li>
 							</ul>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>template: <span class="tsd-signature-type">Record</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">C</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">B</span><span class="tsd-signature-symbol">&gt;</span></h5>
+									<h5>template: <span class="tsd-signature-type">Record</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">TemplateKeys</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">TemplateValues</span><span class="tsd-signature-symbol">&gt;</span></h5>
 								</li>
 								<li>
-									<h5>obj: <span class="tsd-signature-type">Record</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">A</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">D</span><span class="tsd-signature-symbol">&gt;</span></h5>
+									<h5>obj: <a href="globals.html#row" class="tsd-signature-type">Row</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Obj</span><span class="tsd-signature-symbol">&gt;</span></h5>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Record</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">C</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">D</span><span class="tsd-signature-symbol">&gt;</span></h4>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Record</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">TemplateKeys</span><span class="tsd-signature-symbol">, </span><a href="globals.html#values" class="tsd-signature-type">Values</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Obj</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -171,40 +278,37 @@
 					<a name="filterobjectarray" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagConst">Const</span> filter<wbr>Object<wbr>Array</h3>
 					<ul class="tsd-signatures tsd-kind-function tsd-has-type-parameter">
-						<li class="tsd-signature tsd-kind-icon">filter<wbr>Object<wbr>Array&lt;A, B, C, D&gt;<span class="tsd-signature-symbol">(</span>template<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Record</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">C</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">B</span><span class="tsd-signature-symbol">&gt;</span>, objArray<span class="tsd-signature-symbol">: </span><a href="globals.html#recordarray" class="tsd-signature-type">RecordArray</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">A</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">D</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Record</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">C</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">D</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">[]</span></li>
+						<li class="tsd-signature tsd-kind-icon">filter<wbr>Object<wbr>Array&lt;TemplateKeys, TemplateValues, Obj&gt;<span class="tsd-signature-symbol">(</span>template<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Record</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">TemplateKeys</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">TemplateValues</span><span class="tsd-signature-symbol">&gt;</span>, objArray<span class="tsd-signature-symbol">: </span><a href="globals.html#rows" class="tsd-signature-type">Rows</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Obj</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Record</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">TemplateKeys</span><span class="tsd-signature-symbol">, </span><a href="globals.html#values" class="tsd-signature-type">Values</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Obj</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">[]</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/Mahaditya/dbjoin/blob/5c244d3/src/lib/filterObjectArray.ts#L5">lib/filterObjectArray.ts:5</a></li>
+									<li>Defined in <a href="https://github.com/Mahaditya/dbjoin/blob/92aa084/src/lib/filterObjectArray.ts#L5">lib/filterObjectArray.ts:5</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-type-parameters-title">Type parameters</h4>
 							<ul class="tsd-type-parameters">
 								<li>
-									<h4>A<span class="tsd-signature-symbol">: </span><a href="globals.html#recordkeys" class="tsd-signature-type">RecordKeys</a></h4>
+									<h4>TemplateKeys<span class="tsd-signature-symbol">: </span><a href="globals.html#columns" class="tsd-signature-type">Columns</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Obj</span><span class="tsd-signature-symbol">&gt;</span></h4>
 								</li>
 								<li>
-									<h4>B</h4>
+									<h4>TemplateValues<span class="tsd-signature-symbol">: </span><a href="globals.html#recordkeys" class="tsd-signature-type">RecordKeys</a></h4>
 								</li>
 								<li>
-									<h4>C<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">A</span></h4>
-								</li>
-								<li>
-									<h4>D</h4>
+									<h4>Obj</h4>
 								</li>
 							</ul>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>template: <span class="tsd-signature-type">Record</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">C</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">B</span><span class="tsd-signature-symbol">&gt;</span></h5>
+									<h5>template: <span class="tsd-signature-type">Record</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">TemplateKeys</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">TemplateValues</span><span class="tsd-signature-symbol">&gt;</span></h5>
 								</li>
 								<li>
-									<h5>objArray: <a href="globals.html#recordarray" class="tsd-signature-type">RecordArray</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">A</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">D</span><span class="tsd-signature-symbol">&gt;</span></h5>
+									<h5>objArray: <a href="globals.html#rows" class="tsd-signature-type">Rows</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Obj</span><span class="tsd-signature-symbol">&gt;</span></h5>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Record</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">C</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">D</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">[]</span></h4>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Record</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">TemplateKeys</span><span class="tsd-signature-symbol">, </span><a href="globals.html#values" class="tsd-signature-type">Values</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Obj</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">[]</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -212,13 +316,13 @@
 					<a name="from" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagConst">Const</span> from</h3>
 					<ul class="tsd-signatures tsd-kind-function tsd-has-type-parameter">
-						<li class="tsd-signature tsd-kind-icon">from&lt;TableName, TableKeys, TemplateKeys, TemplateValues, TableValues&gt;<span class="tsd-signature-symbol">(</span>template<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Record</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">TableName</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">Record</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">TemplateKeys</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">TemplateValues</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">(Anonymous function)</span></li>
+						<li class="tsd-signature tsd-kind-icon">from&lt;TableName, TemplateKeys, TemplateValues, LeftObject&gt;<span class="tsd-signature-symbol">(</span>template<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Record</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">TableName</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">Record</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">TemplateKeys</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">TemplateValues</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">(Anonymous function)</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/Mahaditya/dbjoin/blob/5c244d3/src/lib/select.ts#L61">lib/select.ts:61</a></li>
+									<li>Defined in <a href="https://github.com/Mahaditya/dbjoin/blob/92aa084/src/lib/select.ts#L56">lib/select.ts:56</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-type-parameters-title">Type parameters</h4>
@@ -227,16 +331,13 @@
 									<h4>TableName<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></h4>
 								</li>
 								<li>
-									<h4>TableKeys<span class="tsd-signature-symbol">: </span><a href="globals.html#recordkeys" class="tsd-signature-type">RecordKeys</a></h4>
-								</li>
-								<li>
-									<h4>TemplateKeys<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">TableKeys</span></h4>
+									<h4>TemplateKeys<span class="tsd-signature-symbol">: </span><a href="globals.html#keys" class="tsd-signature-type">Keys</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">LeftObject</span><span class="tsd-signature-symbol">&gt;</span></h4>
 								</li>
 								<li>
 									<h4>TemplateValues<span class="tsd-signature-symbol">: </span><a href="globals.html#recordkeys" class="tsd-signature-type">RecordKeys</a></h4>
 								</li>
 								<li>
-									<h4>TableValues</h4>
+									<h4>LeftObject</h4>
 								</li>
 							</ul>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -253,13 +354,13 @@
 					<a name="leftjoin" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagConst">Const</span> left<wbr>Join</h3>
 					<ul class="tsd-signatures tsd-kind-function tsd-has-type-parameter">
-						<li class="tsd-signature tsd-kind-icon">left<wbr>Join&lt;TableName, LeftTableKeys, RightTableKeys, TemplateKeys, TemplateValues, LeftTableValues, RightTableValues&gt;<span class="tsd-signature-symbol">(</span>masterTemplate<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Record</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">TableName</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">Record</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">TemplateKeys</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">TemplateValues</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">(Anonymous function)</span></li>
+						<li class="tsd-signature tsd-kind-icon">left<wbr>Join&lt;TableName, TemplateKeys, TemplateValues, LeftObject, RightObject&gt;<span class="tsd-signature-symbol">(</span>masterTemplate<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Record</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">TableName</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">Record</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">TemplateKeys</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">TemplateValues</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">(Anonymous function)</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/Mahaditya/dbjoin/blob/5c244d3/src/lib/select.ts#L30">lib/select.ts:30</a></li>
+									<li>Defined in <a href="https://github.com/Mahaditya/dbjoin/blob/92aa084/src/lib/select.ts#L30">lib/select.ts:30</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-type-parameters-title">Type parameters</h4>
@@ -268,22 +369,16 @@
 									<h4>TableName<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></h4>
 								</li>
 								<li>
-									<h4>LeftTableKeys<span class="tsd-signature-symbol">: </span><a href="globals.html#recordkeys" class="tsd-signature-type">RecordKeys</a></h4>
-								</li>
-								<li>
-									<h4>RightTableKeys<span class="tsd-signature-symbol">: </span><a href="globals.html#recordkeys" class="tsd-signature-type">RecordKeys</a></h4>
-								</li>
-								<li>
-									<h4>TemplateKeys<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">RightTableKeys</span></h4>
+									<h4>TemplateKeys<span class="tsd-signature-symbol">: </span><a href="globals.html#keys" class="tsd-signature-type">Keys</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">RightObject</span><span class="tsd-signature-symbol">&gt;</span></h4>
 								</li>
 								<li>
 									<h4>TemplateValues<span class="tsd-signature-symbol">: </span><a href="globals.html#recordkeys" class="tsd-signature-type">RecordKeys</a></h4>
 								</li>
 								<li>
-									<h4>LeftTableValues</h4>
+									<h4>LeftObject</h4>
 								</li>
 								<li>
-									<h4>RightTableValues</h4>
+									<h4>RightObject</h4>
 								</li>
 							</ul>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -306,7 +401,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/Mahaditya/dbjoin/blob/5c244d3/src/lib/leftJoinArray.ts#L5">lib/leftJoinArray.ts:5</a></li>
+									<li>Defined in <a href="https://github.com/Mahaditya/dbjoin/blob/92aa084/src/lib/leftJoinArray.ts#L5">lib/leftJoinArray.ts:5</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-type-parameters-title">Type parameters</h4>
@@ -351,7 +446,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/Mahaditya/dbjoin/blob/5c244d3/src/lib/leftJoinObject.ts#L3">lib/leftJoinObject.ts:3</a></li>
+									<li>Defined in <a href="https://github.com/Mahaditya/dbjoin/blob/92aa084/src/lib/leftJoinObject.ts#L3">lib/leftJoinObject.ts:3</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-type-parameters-title">Type parameters</h4>
@@ -386,7 +481,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/Mahaditya/dbjoin/blob/5c244d3/src/lib/leftJoinObject.ts#L14">lib/leftJoinObject.ts:14</a></li>
+									<li>Defined in <a href="https://github.com/Mahaditya/dbjoin/blob/92aa084/src/lib/leftJoinObject.ts#L14">lib/leftJoinObject.ts:14</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-type-parameters-title">Type parameters</h4>
@@ -427,7 +522,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/Mahaditya/dbjoin/blob/5c244d3/src/lib/select.ts#L7">lib/select.ts:7</a></li>
+									<li>Defined in <a href="https://github.com/Mahaditya/dbjoin/blob/92aa084/src/lib/select.ts#L7">lib/select.ts:7</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-type-parameters-title">Type parameters</h4>
@@ -442,7 +537,7 @@
 									<h4>RightTableKeys<span class="tsd-signature-symbol">: </span><a href="globals.html#recordkeys" class="tsd-signature-type">RecordKeys</a></h4>
 								</li>
 								<li>
-									<h4>TemplateKeys<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">LeftTableKeys</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">RightTableKeys</span></h4>
+									<h4>TemplateKeys<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">LeftTableKeys</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">RightTableKeys</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span></h4>
 								</li>
 								<li>
 									<h4>TemplateValues<span class="tsd-signature-symbol">: </span><a href="globals.html#recordkeys" class="tsd-signature-type">RecordKeys</a></h4>
@@ -474,7 +569,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/Mahaditya/dbjoin/blob/5c244d3/src/lib/renameArrayObjects.ts#L5">lib/renameArrayObjects.ts:5</a></li>
+									<li>Defined in <a href="https://github.com/Mahaditya/dbjoin/blob/92aa084/src/lib/renameArrayObjects.ts#L5">lib/renameArrayObjects.ts:5</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-type-parameters-title">Type parameters</h4>
@@ -512,7 +607,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/Mahaditya/dbjoin/blob/5c244d3/src/lib/renameObjectKeys.ts#L5">lib/renameObjectKeys.ts:5</a></li>
+									<li>Defined in <a href="https://github.com/Mahaditya/dbjoin/blob/92aa084/src/lib/renameObjectKeys.ts#L5">lib/renameObjectKeys.ts:5</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-type-parameters-title">Type parameters</h4>
@@ -550,7 +645,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/Mahaditya/dbjoin/blob/5c244d3/src/lib/select.ts#L82">lib/select.ts:82</a></li>
+									<li>Defined in <a href="https://github.com/Mahaditya/dbjoin/blob/92aa084/src/lib/select.ts#L76">lib/select.ts:76</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-type-parameters-title">Type parameters</h4>
@@ -593,10 +688,28 @@
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
 					<li class=" tsd-kind-type-alias tsd-has-type-parameter">
+						<a href="globals.html#columns" class="tsd-kind-icon">Columns</a>
+					</li>
+					<li class=" tsd-kind-type-alias tsd-has-type-parameter">
+						<a href="globals.html#common" class="tsd-kind-icon">Common</a>
+					</li>
+					<li class=" tsd-kind-type-alias tsd-has-type-parameter">
+						<a href="globals.html#keys" class="tsd-kind-icon">Keys</a>
+					</li>
+					<li class=" tsd-kind-type-alias tsd-has-type-parameter">
 						<a href="globals.html#recordarray" class="tsd-kind-icon">Record<wbr>Array</a>
 					</li>
 					<li class=" tsd-kind-type-alias">
 						<a href="globals.html#recordkeys" class="tsd-kind-icon">Record<wbr>Keys</a>
+					</li>
+					<li class=" tsd-kind-type-alias tsd-has-type-parameter">
+						<a href="globals.html#row" class="tsd-kind-icon">Row</a>
+					</li>
+					<li class=" tsd-kind-type-alias tsd-has-type-parameter">
+						<a href="globals.html#rows" class="tsd-kind-icon">Rows</a>
+					</li>
+					<li class=" tsd-kind-type-alias tsd-has-type-parameter">
+						<a href="globals.html#values" class="tsd-kind-icon">Values</a>
 					</li>
 					<li class=" tsd-kind-function tsd-has-type-parameter">
 						<a href="globals.html#filterobject" class="tsd-kind-icon">filter<wbr>Object</a>
